@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/E3SM-Project/ChemDyg/archive/refs/tags/{{ version }}.tar.gz
+  url: https://github.com/E3SM-Project/ChemDyg/archive/refs/tags/v{{ version }}.tar.gz
   sha256: f52721aad4abc0cb624ca52563c761ead3a7de7b2f988d1049952ba67694bccb
 
 build:
