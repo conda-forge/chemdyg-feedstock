@@ -1,5 +1,5 @@
 {% set name = "chemdyg" %}
-{% set version = "0.1.5" %}
+{% set version = "1.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/ChemDyg/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 872a6cc4b4513ae9c8812beea8b9c04cd56aeb2cad33a99b8d49b41b34f74086
+  sha256: ca7a620e721ef5c0db8e189782fc9f550a889b0da56c405f9782764bdef4058c
 
 build:
   noarch: python
