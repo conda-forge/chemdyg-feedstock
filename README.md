@@ -155,6 +155,3 @@ Feedstock Maintainers
 * [@tangq](https://github.com/tangq/)
 * [@xylar](https://github.com/xylar/)
 
-
-<!-- dummy commit to enable rerendering -->
-
