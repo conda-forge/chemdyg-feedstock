@@ -40,14 +40,14 @@ Current release info
 Installing chemdyg
 ==================
 
-Installing `chemdyg` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `chemdyg` from the `conda-forge/label/chemdyg_dev` channel can be achieved by adding `conda-forge/label/chemdyg_dev` to your channels with:
 
 ```
-conda config --add channels conda-forge
+conda config --add channels conda-forge/label/chemdyg_dev
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `chemdyg` can be installed with `conda`:
+Once the `conda-forge/label/chemdyg_dev` channel has been enabled, `chemdyg` can be installed with `conda`:
 
 ```
 conda install chemdyg
@@ -62,26 +62,26 @@ mamba install chemdyg
 It is possible to list all of the versions of `chemdyg` available on your platform with `conda`:
 
 ```
-conda search chemdyg --channel conda-forge
+conda search chemdyg --channel conda-forge/label/chemdyg_dev
 ```
 
 or with `mamba`:
 
 ```
-mamba search chemdyg --channel conda-forge
+mamba search chemdyg --channel conda-forge/label/chemdyg_dev
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search chemdyg --channel conda-forge
+mamba repoquery search chemdyg --channel conda-forge/label/chemdyg_dev
 
 # List packages depending on `chemdyg`:
-mamba repoquery whoneeds chemdyg --channel conda-forge
+mamba repoquery whoneeds chemdyg --channel conda-forge/label/chemdyg_dev
 
 # List dependencies of `chemdyg`:
-mamba repoquery depends chemdyg --channel conda-forge
+mamba repoquery depends chemdyg --channel conda-forge/label/chemdyg_dev
 ```
 
 
@@ -103,7 +103,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
