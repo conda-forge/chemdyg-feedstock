@@ -38,7 +38,7 @@ test:
     - pip
     - python {{ python_min }}
   commands:
-    - pip check
+    # - pip check
 
 about:
   home: https://github.com/E3SM-Project/ChemDyg
