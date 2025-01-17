@@ -1,2 +1,4 @@
+channel_sources:
+  - conda-forge/label/zppy_dev,conda-forge
 channel_targets:
   - conda-forge chemdyg_dev

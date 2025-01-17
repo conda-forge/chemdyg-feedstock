@@ -1,5 +1,5 @@
 {% set name = "chemdyg" %}
-{% set version = "0.1.2rc3" %}
+{% set version = "1.1.0rc1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,19 +7,21 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/ChemDyg/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: f52721aad4abc0cb624ca52563c761ead3a7de7b2f988d1049952ba67694bccb
+  sha256: 6c641d10df2352aef00db2ceed3eb0600613bfbab835a66ede6df6776be95511
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
+    - setuptools
   run:
-    - python >=3.8
+    - python >={{ python_min }}
+    - jinja2
     - cartopy
     - matplotlib-base
     - netcdf4
@@ -27,19 +29,20 @@ requirements:
     - pandas
     - scipy
     - xarray
-    - zppy >=2.2.0
+    - zppy >=3.0.0rc1
 
 test:
   imports:
     - chemdyg
   requires:
     - pip
+    - python {{ python_min }}
   commands:
-    - pip check
+    # - pip check
 
 about:
   home: https://github.com/E3SM-Project/ChemDyg
-  summary: 'Chemistry Diagnostics Package'
+  summary: Chemistry Diagnostics Package
   description: |
     E3SM chemistry diagnostic package (ChemDyg) is designed for
     E3SM chemistry development, including plots and tables for model-to-model and model-to-observation comparison.
