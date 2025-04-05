@@ -1,5 +1,5 @@
 {% set name = "chemdyg" %}
-{% set version = "1.0.1" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/ChemDyg/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: a775f554f825840547870b482d4c6bda33225c07543153f11a4a13a18a1ff565
+  sha256: aa7519938fd43e5d44d1b5584b81861b858e74454055de32dd7e30d17d1e3744
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -28,8 +28,7 @@ requirements:
     - pandas
     - scipy
     - xarray
-    - zppy >=2.2.0
-
+    - zppy >=3.0.0
 test:
   imports:
     - chemdyg
