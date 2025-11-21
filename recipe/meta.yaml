@@ -1,5 +1,5 @@
 {% set name = "chemdyg" %}
-{% set version = "1.1.0" %}
+{% set version = "1.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/ChemDyg/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: aa7519938fd43e5d44d1b5584b81861b858e74454055de32dd7e30d17d1e3744
+  sha256: 323d6a449199de186e8a2255e79a9168cc6f6b0a48e3067a32b417c0fbe53f7b
 
 build:
   noarch: python
@@ -22,6 +22,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - cartopy
+    - jinja2
     - matplotlib-base
     - netcdf4
     - numpy
